@@ -1,5 +1,172 @@
-.body {
-  background-color: #000000;
-  font-family: Arial, sans-serif;
-  color: azure;
+/*modifico la class cabezera*/  
+.cabezera {  
+
+    background: linear-gradient(135deg, #000000 0%, #2D2D2D 100%);  
+    /* Establece un fondo degradado lineal desde el negro (#000000) al gris oscuro (#2D2D2D), en un ángulo de 135 grados. Crea un efecto de transición suave en el fondo. */
+
+    display: flex;  
+    /* Cambia el display a "flex", lo que permite alinear y distribuir elementos hijos (como logos o menús) de manera flexible en una fila. */
+
+    align-items: center;  
+    /* Alinea verticalmente los elementos hijos al centro dentro del contenedor flex. */
+
+    justify-content: space-between;  
+    /* Distribuye horizontalmente los elementos hijos con espacio entre ellos, empujando el primero al inicio y el último al final. */
+
+    padding: 15px 20px;  
+    /* Agrega relleno interno: 15px arriba/abajo y 20px a los lados, para dar espacio alrededor del contenido. */
+
+    gap: 30px;  
+    /* Agrega un espacio de 30px entre los elementos hijos en el contenedor flex. */
+
+    border-bottom: 3px solid #2CFF05;  
+    /* Agrega un borde inferior de 3px de grosor, sólido y de color verde neón (#2CFF05), para separar visualmente la cabecera del resto de la página. */
+}
+
+/*modifico los parametros del logo*/  
+#logo-C{  
+
+    width: 90px;  
+    /* Establece el ancho del logo en 90 píxeles. */
+
+    height: 90px;  
+    /* Establece la altura del logo en 90 píxeles, haciendo que sea cuadrado. */
+
+    border-radius: 50%;  
+    /* Redondea los bordes al 50%, convirtiendo el logo en un círculo (asumiendo que es una imagen cuadrada). */
+}
+
+/*Modifico la class body*/  
+.body {  
+
+    background: linear-gradient(180deg, #000000 0%, #2D2D2D 100%);  
+    /* Fondo degradado vertical (180 grados) desde negro a gris oscuro, similar al header pero en dirección vertical. */
+
+    display: flex;  
+    /* Activa flexbox para alinear hijos en columna (ver siguiente propiedad). */
+
+    flex-direction: column;  
+    /* Hace que los elementos hijos se apilen verticalmente en una columna. */
+
+    margin: 0;  
+    /* Elimina cualquier margen exterior alrededor del body, para que ocupe todo el espacio. */
+
+    min-height: 100vh;  
+    /* Asegura que el body tenga al menos la altura completa de la ventana del navegador (100vh = 100% de la viewport height), evitando que sea más corto que la pantalla. */
+}
+
+/*Modifico el Pie de pagina*/  
+.Pie-pag {  
+    display: flex;  
+    /* Activa flexbox para distribuir secciones del footer. */
+
+    justify-content: space-around;  
+    /* Distribuye horizontalmente los elementos hijos con espacio igual alrededor de ellos. */
+
+    align-items: flex-start;  
+    /* Alinea verticalmente los elementos hijos al inicio (arriba) del contenedor. */
+
+    gap: 30px;  
+    /* Espacio de 30px entre elementos hijos. */
+
+    background: linear-gradient(90deg, #000000 0%, #2D2D2D 50%, #BF00FF 100%);  
+    /* Fondo degradado horizontal (90 grados) desde negro, pasando por gris oscuro al 50%, hasta púrpura neón (#BF00FF). */
+
+    border-top: 5px solid #2CFF05;  
+    /* Borde superior de 5px sólido en verde neón, para separar del contenido superior. */
+
+    color: #2D2D2D;  
+    /* Color de texto predeterminado en gris oscuro para todo el footer. */
+
+    margin-top: auto;  
+    /* Empuja el footer al final de la página (en un contenedor flex como .body), independientemente del contenido. */
+
+    padding: 40px 40px;  
+    /* Relleno interno de 40px en todos los lados (arriba, abajo, izquierda, derecha). */
+
+    box-shadow: 0 -5px 20px rgba(44, 255, 5, 0.2);  
+    /* Agrega una sombra superior (eje Y negativo) con desenfoque de 20px y opacidad 0.2, usando un verde neón translúcido para un efecto "glow". */
+
+    flex-wrap: wrap;  
+    /* Permite que los elementos hijos se envuelvan a la siguiente línea si no caben en una sola fila (útil en pantallas pequeñas). */
+}
+
+/* Secciones dentro del pie de página */  
+.footer-section {  
+/* Clase para secciones dentro del footer, como columnas de enlaces. */
+
+    display: flex;  
+    /* Flexbox para apilar elementos hijos verticalmente. */
+
+    flex-direction: column;  
+    /* Apila los hijos en columna. */
+
+    gap: 12px;  
+    /* Espacio de 12px entre elementos hijos. */
+
+    min-width: 180px;  
+    /* Ancho mínimo de 180px para cada sección, evitando que se encojan demasiado. */
+}
+
+.footer-section h4 {  
+/* Estilos específicos para etiquetas <h4> dentro de .footer-section (títulos de secciones). */
+
+    margin: 0;  
+    /* Elimina márgenes alrededor del h4. */
+
+    color: #2CFF05;  
+    /* Color de texto en verde neón. */
+
+    font-size: 1em;  
+    /* Tamaño de fuente relativo al predeterminado (1em = 100% del tamaño base). */
+
+    font-weight: 600;  
+    /* Grosor de fuente semi-negrita (600). */
+
+    border-bottom: 2px solid #2CFF05;  
+    /* Borde inferior de 2px sólido en verde neón. */
+
+    padding-bottom: 8px;  
+    /* Relleno inferior de 8px para separar del borde. */
+}
+
+/* Links dentro del footer */  
+/* Comentario descriptivo: estilos para enlaces en el footer. No funcional. */
+
+.footer-link {  
+/** Clase para enlaces (<a>) dentro del footer. */
+
+    text-decoration: none;  
+    /* Elimina el subrayado predeterminado de los enlaces. */
+
+    color: #2D2D2D;  
+    /* Color de texto en gris oscuro. */
+
+    font-size: 0.9em;  
+    /* Tamaño de fuente un poco más pequeño (90% del base). */
+
+    transition: all 0.3s ease;  
+    /* Transición suave de 0.3 segundos para todos los cambios (como color o padding) al hover. */
+
+    padding: 5px 0;  
+    /* Relleno vertical de 5px arriba/abajo, sin horizontal. */
+
+    border-left: 3px solid transparent;  
+    /* Borde izquierdo de 3px transparente (invisible por defecto). */
+
+    padding-left: 8px;  
+    /* Relleno izquierdo de 8px para indentar el texto. */
+}
+
+.footer-link:hover {  
+/* Estilos que se aplican cuando el mouse pasa sobre el enlace (estado hover). */
+
+    color: #2CFF05;  
+    /* Cambia el color de texto a verde neón. */
+
+    border-left: 3px solid #2CFF05;  
+    /* Hace visible el borde izquierdo en verde neón. */
+
+    padding-left: 15px;  
+    /* Aumenta el relleno izquierdo a 15px, creando un efecto de "indentación" al hover. */
 }
