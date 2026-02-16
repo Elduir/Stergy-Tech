@@ -1,0 +1,277 @@
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*ESTILOS PARA LA PÁGINA DE CREACIÓN DE CUENTA*/
+/*
+Este archivo contiene todos los estilos para la página de creación de cuenta.
+Usa un tema oscuro con acentos dorados (#D4A574) coherente con el diseño general del sitio.
+*/
+
+/* ======= CONTENEDOR PRINCIPAL DEL BODY ======= */
+/* Estilos para el cuerpo de la página: fondo degradado, centrado y responsive */
+.login-body {
+    background: linear-gradient(135deg, #3d3428 0%, #5c4a3d 100%); /* Gradiente marrón oscuro con dorado */
+    display: flex;                                                   /* Flexbox para centrar contenido */
+    justify-content: center;                                         /* Centra horizontalmente */
+    align-items: center;                                             /* Centra verticalmente */
+    min-height: 100vh;                                               /* Mínimo altura de pantalla completa */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente limpia y moderna */
+    margin: 0;                                                       /* Sin márgenes */
+    padding: 20px;                                                   /* Espaciado interno para responsive */
+}
+
+/* ======= CONTENEDOR DEL FORMULARIO ======= */
+/* Contenedor que envuelve la tarjeta de creación de cuenta, define ancho máximo y espaciado */
+.login-container {
+    width: 100%;           /* Ancho responsivo del contenedor */
+    max-width: 420px;      /* Ancho máximo para no ser demasiado grande */
+    padding: 40px 0;       /* Espaciado vertical alrededor del contenedor */
+}
+
+/* ======= TARJETA PRINCIPAL DE CREACIÓN DE CUENTA ======= */
+/* Estilo principal de la tarjeta que contiene el formulario con bordes dorados y sombra */
+.login-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);  /* Gradiente gris oscuro */
+    border: 2px solid #D4A574;                                        /* Borde dorado distintivo */
+    border-radius: 15px;                                              /* Esquinas redondeadas */
+    padding: 40px;                                                    /* Espaciado interno */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);                      /* Sombra profunda para efecto de elevación */
+    animation: slideIn 0.5s ease-out;                                 /* Animación de entrada suave */
+}
+
+/* ======= ANIMACIÓN DE ENTRADA ======= */
+/* Animación que hace que la tarjeta aparezca suavemente desde arriba */
+@keyframes slideIn {
+    from {
+        opacity: 0;                    /* Inicio: invisible */
+        transform: translateY(20px);   /* Inicio: 20px más abajo */
+    }
+    to {
+        opacity: 1;                    /* Final: completamente visible */
+        transform: translateY(0);      /* Final: en su posición original */
+    }
+}
+
+/* ======= ENCABEZADO DEL FORMULARIO ======= */
+/* Sección superior de creación de cuenta con logo, título y descripción */
+.login-header {
+    text-align: center;       /* Alinea el contenido al centro */
+    margin-bottom: 30px;      /* Espaciado inferior antes del formulario */
+}
+
+/* ======= LOGO DEL SITIO ======= */
+/* Estilo del logo con bordes circulares y efecto hover */
+.login-logo {
+    width: 80px;                                         /* Ancho del logo */
+    height: 80px;                                        /* Alto del logo (cuadrado) */
+    margin-bottom: 20px;                                 /* Espacio inferior */
+    border-radius: 50%;                                  /* Forma circular */
+    border: 3px solid #D4A574;                          /* Borde dorado */
+    padding: 5px;                                        /* Espaciado interno */
+    background-color: rgba(212, 165, 116, 0.1);         /* Fondo dorado transparente */
+    transition: transform 0.3s ease;                     /* Transición suave para hover */
+}
+
+/* Efecto al pasar el mouse sobre el logo */
+.login-logo:hover {
+    transform: scale(1.05);  /* Agranda el logo un 5% */
+}
+
+/* ======= TÍTULOS DEL ENCABEZADO ======= */
+/* Estilos para el título principal (h1) de creación de cuenta */
+.login-header h1 {
+    color: #D4A574;          /* Color dorado */
+    font-size: 28px;         /* Tamaño grande para el título */
+    margin: 15px 0 5px;      /* Espaciado */
+    font-weight: 600;        /* Semi-negrita */
+}
+
+/* Estilos para el subtítulo o descripción (p) */
+.login-header p {
+    color: #E8DCC8;          /* Color beige claro */
+    font-size: 14px;         /* Tamaño pequeño */
+    margin: 0;               /* Sin margen */
+    opacity: 0.8;            /* Ligeramente transparente */
+}
+
+/* ======= FORMULARIO PRINCIPAL ======= */
+/* Contenedor que envuelve todos los campos del formulario */
+.login-form {
+    display: flex;              /* Flexbox para organizar campos en columna */
+    flex-direction: column;     /* Campos apilados verticalmente */
+    gap: 20px;                  /* Espaciado entre campos */
+}
+
+/* ======= GRUPO DE FORMULARIO ======= */
+/* Contenedor de cada campo (label + input) */
+.form-group {
+    display: flex;              /* Flexbox */
+    flex-direction: column;     /* Label arriba, input abajo */
+    gap: 8px;                   /* Espacio entre label e input */
+}
+
+/* Estilos para las etiquetas de los campos */
+.form-group label {
+    color: #D4A574;             /* Color dorado */
+    font-weight: 500;           /* Semi-negrita */
+    font-size: 14px;            /* Tamaño pequeño */
+}
+
+/* ======= INPUTS Y TEXTAREAS ======= */
+/* Estilos comunes para campos de entrada de texto */
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;                              /* Espaciado interno */
+    border: 2px solid #5c4a3d;                       /* Borde marrón oscuro */
+    border-radius: 8px;                              /* Esquinas redondeadas */
+    background-color: #1a1a1a;                       /* Fondo muy oscuro */
+    color: #E8DCC8;                                  /* Texto beige */
+    font-size: 14px;                                 /* Tamaño de texto */
+    transition: all 0.3s ease;                       /* Transición suave para efectos */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente consistente */
+}
+
+/* Placeholder (texto de ayuda) transparente */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(232, 220, 200, 0.5);  /* Beige semi-transparente */
+}
+
+/* Efecto al enfocar un campo (hacer clic en él) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;                                    /* Sin borde de navegador */
+    border-color: #D4A574;                           /* Borde se vuelve dorado */
+    background-color: #242424;                       /* Fondo más claro */
+    box-shadow: 0 0 10px rgba(212, 165, 116, 0.3);  /* Resplandor dorado */
+}
+
+/* ======= FILAS MÚLTIPLES DE FORMULARIO ======= */
+/* Grid para poner campos lado a lado (útil para campos múltiples) */
+.form-row {
+    display: grid;              /* CSS Grid */
+    grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
+    gap: 15px;                  /* Espacio entre columnas */
+}
+
+/* Quita margen de form-group dentro de form-row */
+.form-row .form-group {
+    margin: 0;
+}
+
+/* ======= BOTÓN DE ENVÍO ======= */
+/* Botón principal para crear cuenta */
+.login-button {
+    padding: 12px;                                      /* Espaciado interno */
+    background: linear-gradient(135deg, #D4A574 0%, #c49564 100%);  /* Gradiente dorado */
+    color: #3d3428;                                     /* Texto marrón oscuro */
+    border: none;                                       /* Sin borde */
+    border-radius: 8px;                                 /* Esquinas redondeadas */
+    font-size: 16px;                                    /* Tamaño de texto */
+    font-weight: 600;                                   /* Negrita */
+    cursor: pointer;                                    /* Cursor de clic */
+    transition: all 0.3s ease;                         /* Transición suave */
+    margin-top: 10px;                                   /* Espacio superior */
+}
+
+/* Efecto al pasar el mouse */
+.login-button:hover {
+    transform: translateY(-2px);                        /* Sube 2px */
+    box-shadow: 0 10px 25px rgba(212, 165, 116, 0.4);  /* Sombra dorada aumentada */
+}
+
+/* Efecto al hacer clic */
+.login-button:active {
+    transform: translateY(0);                           /* Vuelve a su posición original */
+}
+
+/* ======= PIE DE PÁGINA ======= */
+/* Sección inferior con link a login */
+.login-footer {
+    text-align: center;         /* Texto centrado */
+    margin-top: 25px;           /* Espacio superior */
+    color: #E8DCC8;             /* Texto beige */
+    font-size: 14px;            /* Tamaño pequeño */
+}
+
+/* Link dentro del pie de página */
+.login-footer a {
+    color: #D4A574;             /* Color dorado */
+    text-decoration: none;      /* Sin subrayado */
+    font-weight: 600;           /* Negrita */
+    transition: all 0.3s ease;  /* Transición suave */
+    border-bottom: 2px solid transparent;  /* Borde invisible al inicio */
+}
+
+/* Efecto al pasar el mouse */
+.login-footer a:hover {
+    color: #E8DCC8;             /* Cambio a beige */
+    border-bottom: 2px solid #D4A574;  /* Aparece borde dorado */
+}
+
+/* ======= VALIDACIÓN DE CAMPOS ======= */
+/* Estilos visuales para campos válidos e inválidos */
+
+/* Cuando un campo es válido (ej: email con formato correcto) */
+.form-group input:valid {
+    border-color: #6b8e23;  /* Borde verde oliva */
+}
+
+/* Cuando un campo es inválido (pero no está vacío) */
+.form-group input:invalid:not(:placeholder-shown) {
+    border-color: #cd5c5c;  /* Borde rojo oscuro */
+}
+
+/* ======= TÉRMINOS Y CONDICIONES ======= */
+/* Checkbox para aceptar términos y condiciones en registro */
+.terms-agreement {
+    display: flex;              /* Flexbox para alinear checkbox y texto */
+    align-items: flex-start;    /* Alinea al inicio (arriba) */
+    gap: 10px;                  /* Espacio entre checkbox y texto */
+    margin-top: 15px;           /* Espacio superior */
+    font-size: 12px;            /* Texto muy pequeño */
+    color: #E8DCC8;             /* Texto beige */
+}
+
+/* Checkbox de términos */
+.terms-agreement input[type="checkbox"] {
+    margin-top: 2px;            /* Pequeño margen superior para alineación */
+    cursor: pointer;            /* Cursor de clic */
+    accent-color: #D4A574;      /* Color dorado cuando seleccionar */
+}
+
+/* Links dentro de términos */
+.terms-agreement a {
+    color: #D4A574;             /* Color dorado */
+    text-decoration: none;      /* Sin subrayado */
+    transition: all 0.3s ease;  /* Transición suave */
+}
+
+/* Efecto al pasar el mouse en links de términos */
+.terms-agreement a:hover {
+    text-decoration: underline;  /* Subrayado al pasar */
+    color: #E8DCC8;             /* Cambio a beige */
+}
+
+/* ======= MENSAJES DE ERROR Y ÉXITO ======= */
+/* Estilos para notificaciones de error */
+#error-message {
+    background-color: #cd5c5c;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #8B3A3A;
+    font-size: 14px;
+    display: none;
+}
+
+/* Estilos para notificaciones de éxito */
+#succes-message {
+    background-color: #6b8e23;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 4px solid #556B2F;
+    font-size: 14px;
+    display: none;
+}

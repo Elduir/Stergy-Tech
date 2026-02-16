@@ -1,0 +1,357 @@
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*ENCABEZADO DE LA PÁGINA*/
+
+/*Estilos para la barra de encabezado de la página*/
+.Cabezera{
+    background: linear-gradient(135deg, #3d3428 0%, #5c4a3d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    gap: 30px;
+    border-bottom: 3px solid #D4A574;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-center {
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #D4A574;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #2d2d2d;
+    color: #E8DCC8;
+}
+
+.search-bar::placeholder {
+    color: rgba(232, 220, 200, 0.6);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #E8DCC8;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #D4A574;
+    border-bottom: 2px solid #D4A574;
+}
+
+.nav-link.perfil {
+    background-color: #D4A574;
+    color: #3d3428;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-bottom: none;
+}
+
+/*Estilos para el logo de la página*/
+#logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/*esto es una prueba de lo que se planea hacer con los productos*/
+/*#logo:hover{  */
+   /* transform: scale(1.1); efecto hover para agrandar la imagen cuando el mouse este sobre ella*/
+    /*transition: transform 0.3s; transicion suave para el efecto hover*/
+/*} */
+
+/*Estilos para el texto del encabezado*/
+#texto_cabezera{
+    font-size: large;
+    color: #D4A574;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*CUERPO PRINCIPAL DE LA PÁGINA*/
+
+/*Estilos para el cuerpo general de la página*/
+body{
+    background: linear-gradient(180deg, #3d3428 0%, #5c4a3d 100%);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/*Estilos para elementos con la clase imagenes*/
+.imagenes {
+    width: 200px; /* Ancho de la imagen */
+    height: 200px; /* Altura de la imagen */
+}
+
+/*Estilos para la parte central principal donde van los productos*/
+#Parte-del-centro{
+    background-color: #2d2d2d;
+    color: #E8DCC8;
+    font-display: center;
+    flex: 1;
+}
+
+/*Estilos para el título central de bienvenida*/
+#textito_central{
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 20px;
+    color: #D4A574;
+}
+
+/*Estilos para el título que anuncia los productos más vendidos*/
+#texto-productos-top-vendidos{
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px;
+    color: #E8DCC8;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CARRUSEL DE PRODUCTOS - Estilos principales del carrusel */
+
+/* Contenedor principal del carrusel: limita el ancho máximo y posiciona los botones */
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    position: relative;
+    padding: 20px;
+    background-color: #3d3428;
+    border-radius: 10px;
+    border: 3px solid #D4A574;
+    box-shadow: 0 8px 20px rgba(212, 165, 116, 0.2);
+}
+
+/* Envoltorio (wrapper) del carrusel: oculta lo que se sale del rango visible */
+.carousel-wrapper {
+    overflow: hidden; /* Oculta los elementos que se salen del contenedor */
+    position: relative; /* Para posicionar elementos dentro */
+}
+
+/* Track (pista): el contenedor que realmente se desplaza horizontalmente */
+.carousel-track {
+    display: flex; /* Alinea los slides horizontalmente */
+    transition: transform 0.5s ease-in-out; /* Animación suave al cambiar slides (0.5 segundos) */
+}
+
+/* Cada slide (página): contiene 3 productos en una cuadrícula */
+.carousel-slide {
+    display: grid; /* Usa CSS Grid para organizar los productos */
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los productos (20 píxeles) */
+    flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del wrapper */
+    padding: 20px 0; /* Espaciado interno arriba y abajo */
+}
+
+/* Cada tarjeta de producto: estilo individual de cada producto */
+.product-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid #8B6F47;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover: cuando pasas el mouse sobre la tarjeta, sube un poco */
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #D4A574;
+    box-shadow: 0 12px 25px rgba(212, 165, 116, 0.3);
+}
+
+/* Imagen del producto */
+.product-image {
+    max-width: 100%; /* No supera el ancho del contenedor */
+    height: 150px; /* Altura fija de 150 píxeles */
+    object-fit: contain; /* Mantiene la proporción de la imagen sin distorsionarla */
+    margin: 10px 0; /* Espaciado arriba y abajo */
+}
+
+/* Nombre del producto */
+.product-name {
+    font-size: 0.95em;
+    margin: 10px 0 5px;
+    color: #E8DCC8;
+    min-height: 40px;
+    font-weight: 600;
+}
+
+/* Especificaciones técnicas del producto */
+.product-specs {
+    font-size: 0.8em;
+    color: #C9A877;
+    margin: 5px 0 10px;
+    min-height: 30px;
+}
+
+/* Precio del producto */
+.product-price {
+    font-size: 1.2em;
+    color: #D4A574;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Botones de navegación del carrusel (flechas) */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8B6F47;
+    border: 2px solid #D4A574;
+    color: #E8DCC8;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 10;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover en los botones: se oscurecen más */
+.carousel-arrow:hover {
+    background-color: #D4A574;
+    color: #3d3428;
+}
+
+/* Botón anterior (flecha izquierda) */
+.prev {
+    left: 0; /* Se posiciona en el lado izquierdo */
+}
+
+/* Botón siguiente (flecha derecha) */
+.next {
+    right: 0; /* Se posiciona en el lado derecho */
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+/*PIE DE PÁGINA*/
+
+/* Estilos para el pie de página */
+.pie-de-pagina{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px;
+    background: linear-gradient(90deg, #3d3428 0%, #5c4a3d 50%, #8B6F47 100%);
+    border-top: 5px solid #D4A574;
+    color: #E8DCC8;
+    margin-top: auto;
+    padding: 40px 40px;
+    box-shadow: 0 -5px 20px rgba(212, 165, 116, 0.2);
+    flex-wrap: wrap;
+}
+
+/* Secciones dentro del pie de página */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.footer-section h4 {
+    margin: 0;
+    color: #D4A574;
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom: 2px solid #D4A574;
+    padding-bottom: 8px;
+}
+
+/* Links dentro del footer */
+.footer-link {
+    text-decoration: none;
+    color: #E8DCC8;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    border-left: 3px solid transparent;
+    padding-left: 8px;
+}
+
+.footer-link:hover {
+    color: #D4A574;
+    border-left: 3px solid #D4A574;
+    padding-left: 15px;
+}
+
+/* ======= PANEL DE PERFIL (desplegable) ======= */
+.perfil-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #3d3428;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.perfil-panel {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    width: 220px;
+    background: linear-gradient(180deg, #2d2d2d, #242424);
+    border: 2px solid #D4A574;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: #E8DCC8;
+    padding: 12px;
+    display: none; /* oculto por defecto */
+    z-index: 50;
+}
+
+.perfil-panel.visible {
+    display: block;
+    animation: slideIn 0.18s ease-out;
+}
+
+.perfil-panel p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.perfil-panel .perfil-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.perfil-panel a, .perfil-panel button {
+    text-decoration: none;
+    color: #52b788;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.perfil-panel a:hover, .perfil-panel button:hover {
+    background: rgba(82,183,136,0.08);
+    color: #e8f5e8;
+    border-color: rgba(82,183,136,0.18);
+}
